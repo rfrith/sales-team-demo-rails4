@@ -1,0 +1,28 @@
+<h2>Viewing Sales Reps</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Unique Identifier</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Sales group</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sales_reps.each do |sales_rep| %>
+      <tr>
+        <td><%= sales_rep.unique_id %></td>
+        <td><%= sales_rep.first_name %></td>
+        <td><%= sales_rep.last_name %></td>
+        <td><%= sales_rep.sales_group.unique_id %></td>
+        <td><%= link_to 'Show', sales_rep %></td>
+        <td><%= link_to 'Edit', edit_sales_rep_path(sales_rep) %></td>
+        <td><%= link_to 'Destroy', sales_rep, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,15 @@
+<h2>Viewing Sales Group</h2>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Unique Identifier:</strong>
+  <%= @sales_group.unique_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @sales_group.description %>
+</p>
+
+<%= link_to 'Edit', edit_sales_group_path(@sales_group) %> |
+<%= link_to 'Back', sales_groups_path %>

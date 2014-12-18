@@ -1,0 +1,23 @@
+<table class="flat-table flat-table-3">
+  <thead>
+    <tr>
+      <th>Sales Group</th>
+			<th>Location</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sales_groups.each do |sales_group| %>
+      <tr>
+        <td><%= sales_group.unique_id %></td>
+        <td>
+			    <% sales_group.locations.each do |location| %>
+				    <%= location.name %> (<%= location.address %> <%= location.city %>, <%= location.state %>  <%= location.zip %>)<br/>
+				
+				
+					<% end %>
+				</td>
+			</tr>
+    <% end %>
+  </tbody>
+</table>

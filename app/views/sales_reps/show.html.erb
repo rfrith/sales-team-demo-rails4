@@ -1,0 +1,25 @@
+<h2>Viewing Sales Rep</h2>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Unique Identifier:</strong>
+  <%= @sales_rep.unique_id %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @sales_rep.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @sales_rep.last_name %>
+</p>
+
+<p>
+  <strong>Sales group:</strong>
+  <%= @sales_rep.sales_group.unique_id %>
+</p>
+
+<%= link_to 'Edit', edit_sales_rep_path(@sales_rep) %> |
+<%= link_to 'Back', sales_reps_path %>

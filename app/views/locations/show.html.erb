@@ -1,0 +1,40 @@
+<h2>Viewing Location</h2>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @location.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @location.address %>
+</p>
+
+<p>
+  <strong>Address2:</strong>
+  <%= @location.address2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @location.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @location.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @location.zip %>
+</p>
+
+<p>
+  <strong>Sales Rep:</strong>
+  <%= @location.sales_rep ? (link_to @location.sales_rep.last_name + ", " + @location.sales_rep.first_name, edit_sales_rep_path(@location.sales_rep)) : "" %>
+</p>
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>
